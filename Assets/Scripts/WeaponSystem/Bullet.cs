@@ -46,6 +46,9 @@ public class Bullet: Moving
 
     private void OnDestroy()
     {
-        GameObject lObject = Instantiate(destroyParticle,transform.position,Quaternion.identity);
+        if(destroyParticle != null)
+        {
+            GameObject lObject = Instantiate(destroyParticle,transform.position,Quaternion.identity);
+        }
     }
 }
