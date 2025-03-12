@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3116777308171539711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6012672238183499462}
+  - component: {fileID: 7531770477513600859}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6012672238183499462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116777308171539711}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 6.859476, y: 71.13765, z: -84.03377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7531770477513600859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116777308171539711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2727a22e40ec1c47b9a0266f4fb57d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePrefab: {fileID: 8818371743127936994, guid: 540d233708423df43b694d012ad506c8, type: 3}
+  liveUpdate: 0
+  drawDebug: 1
+  layerConfigs:
+  - layerTag: Layer1
+    spawnPriority: 2
+    sizeRange: {x: 5, y: 6}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    distanceConstraints:
+    - targetTag: Layer1
+      minDistance: 3
+    spawnRadiusRange: {x: 5, y: 100}
+    maxSpawnAttempts: 100
+    maxSpawnCount: 20
+  - layerTag: Layer2
+    spawnPriority: 1
+    sizeRange: {x: 1, y: 3}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    distanceConstraints:
+    - targetTag: Layer1
+      minDistance: 0
+    - targetTag: Layer2
+      minDistance: 1.5
+    spawnRadiusRange: {x: 5, y: 100}
+    maxSpawnAttempts: 100
+    maxSpawnCount: 20
+  - layerTag: Layer3
+    spawnPriority: 0
+    sizeRange: {x: 0.1, y: 0.5}
+    color: {r: 0, g: 0, b: 1, a: 1}
+    distanceConstraints:
+    - targetTag: Layer2
+      minDistance: 0
+    - targetTag: Layer3
+      minDistance: 0.3
+    spawnRadiusRange: {x: 5, y: 100}
+    maxSpawnAttempts: 100
+    maxSpawnCount: 20
+  regenerate: 0
+  resetToDefaults: 0
