@@ -41,11 +41,17 @@ public class Bullet: Moving
 
     private void OnTriggerEnter(Collider collision)
     {
+        Living lLiving = collision.GetComponent<Living>();
+        if(lLiving != null)
+        {
+            lLiving.ChangeHealth(-damage);
+        }
         Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
+        Debug.Log("bullet destroyed");
         if(destroyParticle != null)
         {
             GameObject lObject = Instantiate(destroyParticle,transform.position,Quaternion.identity);

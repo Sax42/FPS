@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4337650298546427445}
   - component: {fileID: 3585912901205974501}
-  - component: {fileID: 9004796740364599475}
   - component: {fileID: 1727581593019949856}
   m_Layer: 0
   m_Name: CrossBow
@@ -58,19 +57,6 @@ MonoBehaviour:
   magSize: 30
   autoReload: 1
   remainingBullet: 0
---- !u!114 &9004796740364599475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651535510696434358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce258de885efe5448b4915b8e29d8157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectType: 0
 --- !u!65 &1727581593019949856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90,7 +76,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.84, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7863010272816173705
 PrefabInstance:

@@ -92,6 +92,8 @@ public class PlayerInput: MonoBehaviour
     {
         if(interactibleObject is null)
             return;
+        Debug.Log("camera null" + Camera.main.gameObject is null);
+        interactibleObject.Interact(PlayerVision.instance.objectFollowCameraRotation.gameObject);
         interactibleObject.Interact(gameObject);
     }
 

@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4337650298546427445}
   - component: {fileID: 3585912901205974501}
-  - component: {fileID: 9004796740364599475}
   - component: {fileID: 1727581593019949856}
   m_Layer: 0
   m_Name: Gun
@@ -79,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba9f4c6fd1dda24bae98e9e9a489fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectType: 0
   bulletPrefab: {fileID: 5824057688415708570, guid: 25bf00a16df08fc47adcf07e4bbef737, type: 3}
   totalAmo: 100
   burstBulletAmount: 1
@@ -89,19 +89,6 @@ MonoBehaviour:
   magSize: 30
   autoReload: 1
   remainingBullet: 0
---- !u!114 &9004796740364599475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651535510696434358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce258de885efe5448b4915b8e29d8157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectType: 0
 --- !u!65 &1727581593019949856
 BoxCollider:
   m_ObjectHideFlags: 0

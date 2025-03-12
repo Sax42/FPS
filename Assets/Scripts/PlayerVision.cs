@@ -5,9 +5,16 @@ using UnityEngine;
 
 public class PlayerVision: MonoBehaviour
 {
+    public static PlayerVision instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public float mouseSensitivity = 100f; // Controls how fast the camera rotates
     public Transform playerBody; // Reference to the player's body (Capsule)
-
+    public Transform objectFollowCameraRotation;
     private float xRotation = 0f;
 
     private void Start()
@@ -30,5 +37,6 @@ public class PlayerVision: MonoBehaviour
 
         // Rotate the player horizontally
         playerBody.Rotate(Vector3.up * mouseX);
+        objectFollowCameraRotation.rotation = transform.rotation;
     }
 }
