@@ -141,9 +141,8 @@ public class PhysicHandler: MonoBehaviour
 
     private void Start()
     {
-        gravity = new Force(Vector3.down,9.81f,0.1f,9.81f);
-        gravity.name = "gravity";
         AddForce(gravity);
+        gravity.name = "gravity";
     }
 
     private void Update()
